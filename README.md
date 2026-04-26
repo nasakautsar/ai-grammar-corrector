@@ -22,7 +22,7 @@ It not only fixes grammar mistakes, but also shows what changed and why, making 
 
 Preview
 
-
+![preview](assets/assets1.png)
 
 ---
 
