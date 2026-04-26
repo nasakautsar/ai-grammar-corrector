@@ -162,8 +162,13 @@ if st.button("✨ Check", use_container_width=True):
             st.markdown(f"<div class='card'>{user_input}</div>", unsafe_allow_html=True)
 
         with col2:
-            st.markdown("### 🛠 Rule Fix")
+            #st.markdown("### 🛠 Rule Fix")
+            #st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
+            if st.button("Check"): rule_corrected = fix_grammar(user_input)
+            corrected = ai_fix(user_input)
             st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
+            if 'rule_corrected' in locals(): st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
 
         # FINAL AI RESULT
         st.markdown("## 🤖 Final AI Correction")
