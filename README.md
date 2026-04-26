@@ -4,14 +4,14 @@ An interactive AI-powered web app that corrects grammar, highlights changes, and
 
 ---
 
-Overview
+## Overview
 
 This project combines rule-based correction and AI/NLP techniques to improve sentence accuracy.
 It not only fixes grammar mistakes, but also shows what changed and why, making it useful for learning English.
 
 ---
 
- Features
+ ## Features
 
  - Automatic grammar correction
  - Highlight word-by-word changes
@@ -20,7 +20,7 @@ It not only fixes grammar mistakes, but also shows what changed and why, making 
 
 ---
 
-Preview
+## Preview
 
 ![preview](assets/assets1.png)
 
@@ -35,7 +35,7 @@ Tech Stack
 
 ---
 
-How to Run
+## How to Run
 
 git clone https://github.com/username/ai-grammar-corrector.git
 cd ai-grammar-corrector
@@ -44,23 +44,23 @@ streamlit run app.py
 
 ---
 
-Example
+## Example
 
-Input:
+- Input:
 
 she go to market yesterday
 
-Output:
+- Output:
 
 She went to market yesterday.
 
-Explanation:
+- Explanation:
 
 "goes" → "went" (past tense required),
 
 ---
 
-Future Improvements
+## Future Improvements
 
 - Add BERT / GPT-based correction,
 - Improve explanation system,
