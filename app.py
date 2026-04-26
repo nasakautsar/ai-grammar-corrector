@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import difflib
-import language_tool_python
+# import language_tool_python
 
 
 #CONFIG + GLOBAL STYLE,
@@ -124,7 +124,7 @@ def load_model():
     return tokenizer, model
 
 tokenizer, model = load_model()
-tool = language_tool_python.LanguageTool('en-US')
+# tool = language_tool_python.LanguageTool('en-US')
 
 #INPUT
 st.markdown("### ✏️ Enter your sentence")
