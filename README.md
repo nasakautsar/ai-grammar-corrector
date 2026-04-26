@@ -62,19 +62,7 @@ She went to market yesterday.
 
 ## Future Improvements
 
-- Add BERT / GPT-based correction,
-- Improve explanation system,
-- Deploy to Streamlit Cloud,
-- Add speech input,
-
----
-
-Contributing
-
-Feel free to fork this repo and improve it!
-
----
-
-Contact
-
-If you like this project or want to collaborate, feel free to reach out 
+- Add BERT / GPT-based correction
+- Improve explanation system
+- Deploy to Streamlit Cloud
+- Add speech input
