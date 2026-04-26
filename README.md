@@ -26,7 +26,7 @@ It not only fixes grammar mistakes, but also shows what changed and why, making 
 
 ---
 
-Tech Stack
+## Tech Stack
 
 - Python
 - Streamlit
