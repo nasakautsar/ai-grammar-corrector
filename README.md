@@ -13,10 +13,10 @@ It not only fixes grammar mistakes, but also shows what changed and why, making 
 
  Features
 
- - Automatic grammar correction,
- - Highlight word-by-word changes,
- - Explanation of errors (tense, plural, etc.),
- - Fast and interactive UI (Streamlit),
+ - Automatic grammar correction
+ - Highlight word-by-word changes
+ - Explanation of errors (tense, plural, etc.)
+ - Fast and interactive UI (Streamlit)
 
 ---
 
@@ -37,10 +37,10 @@ Tech Stack
 
 How to Run
 
-git clone https://github.com/username/ai-grammar-corrector.git,
-cd ai-grammar-corrector,
-pip install -r requirements.txt,
-streamlit run app.py,
+git clone https://github.com/username/ai-grammar-corrector.git
+cd ai-grammar-corrector
+pip install -r requirements.txt
+streamlit run app.py
 
 ---
 
