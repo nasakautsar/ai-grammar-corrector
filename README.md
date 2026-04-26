@@ -1,4 +1,4 @@
-AI Grammar Corrector
+# AI Grammar Corrector
 
 An interactive AI-powered web app that corrects grammar, highlights changes, and explains errors in a clear and user-friendly way.
 
