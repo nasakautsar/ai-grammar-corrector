@@ -141,8 +141,8 @@ if st.button("✨ Check", use_container_width=True):
         with st.spinner("🔄 Processing..."):
 
             # Rule-based
-            matches = tool.check(user_input)
-            rule_corrected = language_tool_python.utils.correct(user_input, matches)
+            # matches = tool.check(user_input)
+            # rule_corrected = language_tool_python.utils.correct(user_input, matches)
 
             # AI
             input_text = "grammar: " + user_input
