@@ -126,6 +126,9 @@ def load_model():
 tokenizer, model = load_model()
 # tool = language_tool_python.LanguageTool('en-US')
 
+def ai_fix(text):
+    return text.capitalize() + "."
+
 #INPUT
 st.markdown("### ✏️ Enter your sentence")
 
