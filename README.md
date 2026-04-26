@@ -13,10 +13,10 @@ It not only fixes grammar mistakes, but also shows what changed and why, making 
 
  Features
 
- Automatic grammar correction,
- Highlight word-by-word changes,
- Explanation of errors (tense, plural, etc.),
- Fast and interactive UI (Streamlit),
+ - Automatic grammar correction,
+ - Highlight word-by-word changes,
+ - Explanation of errors (tense, plural, etc.),
+ - Fast and interactive UI (Streamlit),
 
 ---
 
@@ -28,19 +28,19 @@ Preview
 
 Tech Stack
 
-Python,
-Streamlit,
-NLP (rule-based + difflib),
-Transformers (optional / future upgrade),
+- Python
+- Streamlit
+- NLP (rule-based + difflib)
+- Transformers (optional / future upgrade)
 
 ---
 
 How to Run
 
-git clone https://github.com/username/ai-grammar-corrector.git
-cd ai-grammar-corrector
-pip install -r requirements.txt
-streamlit run app.py
+git clone https://github.com/username/ai-grammar-corrector.git,
+cd ai-grammar-corrector,
+pip install -r requirements.txt,
+streamlit run app.py,
 
 ---
 
@@ -62,10 +62,10 @@ Explanation:
 
 Future Improvements
 
-Add BERT / GPT-based correction,
-Improve explanation system,
-Deploy to Streamlit Cloud,
-Add speech input,
+- Add BERT / GPT-based correction,
+- Improve explanation system,
+- Deploy to Streamlit Cloud,
+- Add speech input,
 
 ---
 
@@ -75,6 +75,6 @@ Feel free to fork this repo and improve it!
 
 ---
 
- Contact
+Contact
 
 If you like this project or want to collaborate, feel free to reach out 
