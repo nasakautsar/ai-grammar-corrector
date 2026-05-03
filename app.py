@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import difflib
-# import language_tool_python
+import language_tool_python
 
 
 #CONFIG + GLOBAL STYLE,
@@ -124,7 +124,7 @@ def load_model():
     return tokenizer, model
 
 tokenizer, model = load_model()
-# tool = language_tool_python.LanguageTool('en-US')
+tool = language_tool_python.LanguageTool('en-US')
 
 def ai_fix(text):
     return text.capitalize() + "."
@@ -143,9 +143,9 @@ if st.button("✨ Check", use_container_width=True):
     if user_input:
         with st.spinner("🔄 Processing..."):
 
-            # Rule-based
-            # matches = tool.check(user_input)
-            # rule_corrected = language_tool_python.utils.correct(user_input, matches)
+            Rule-based
+            matches = tool.check(user_input)
+            rule_corrected = language_tool_python.utils.correct(user_input, matches)
 
             # AI
             input_text = "grammar: " + user_input
@@ -165,8 +165,8 @@ if st.button("✨ Check", use_container_width=True):
             st.markdown(f"<div class='card'>{user_input}</div>", unsafe_allow_html=True)
 
         with col2:
-            #st.markdown("### 🛠 Rule Fix")
-            #st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
+            st.markdown("### 🛠 Rule Fix")
+            st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
             if st.button("Check"): rule_corrected = fix_grammar(user_input)
             corrected = ai_fix(user_input)
             st.markdown(f"<div class='card'>{rule_corrected}</div>", unsafe_allow_html=True)
