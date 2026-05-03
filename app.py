@@ -1,8 +1,7 @@
 import streamlit as st
-import anthropic
+import google.generativeai as genai
 import difflib
 import language_tool_python
-import json
 
 # CONFIG + GLOBAL STYLE
 st.set_page_config(page_title="AI Grammar Corrector", layout="centered")
@@ -102,26 +101,22 @@ def generate_explanation(user_input, corrected):
 
     return explanations
 
-# ✅ PERUBAHAN 1: Hapus load_model(), ganti ke Claude API client
+# LOAD TOOLS
 @st.cache_resource
 def load_tools():
-    client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+    genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+    gemini = genai.GenerativeModel("gemini-1.5-flash")
     tool = language_tool_python.LanguageTool('en-US')
-    return client, tool
+    return gemini, tool
 
-client, tool = load_tools()
+gemini_model, tool = load_tools()
 
-# ✅ PERUBAHAN 2: Fungsi AI correction pakai Claude API
+# AI CORRECTION
 def ai_correct(text):
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=512,
-        messages=[{
-            "role": "user",
-            "content": f"Correct the grammar of this sentence. Reply with ONLY the corrected sentence, no explanation, no quotes:\n\n{text}"
-        }]
+    response = gemini_model.generate_content(
+        f"Correct the grammar of this sentence. Reply with ONLY the corrected sentence, no explanation, no quotes:\n\n{text}"
     )
-    return message.content[0].text.strip()
+    return response.text.strip()
 
 # INPUT
 st.markdown("### ✏️ Enter your sentence")
