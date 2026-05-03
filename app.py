@@ -105,7 +105,7 @@ def generate_explanation(user_input, corrected):
 @st.cache_resource
 def load_tools():
     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
-    gemini = genai.GenerativeModel("gemini-1.5-flash")
+    gemini = genai.GenerativeModel("gemini-2.0-flash")
     tool = language_tool_python.LanguageTool('en-US')
     return gemini, tool
 
