@@ -143,7 +143,7 @@ if st.button("✨ Check", use_container_width=True):
     if user_input:
         with st.spinner("🔄 Processing..."):
 
-            Rule-based
+            # Rule-based
             matches = tool.check(user_input)
             rule_corrected = language_tool_python.utils.correct(user_input, matches)
 
